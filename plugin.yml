@@ -1,0 +1,57 @@
+name: GiftGiving
+main: com.github.Gamecube762.GiftGiving.main
+author: Gamecube762
+version: 0.1
+prefix: GiftGiving
+commands:
+   Gift:
+      description: Give someone gifts
+      usage: /<command> <name>
+      permission: GiftGiving.command.Gift
+      permission-message: You don't have <permission>
+   MyGift:
+      description: Open My Gifts
+      usage: /<command>
+      permission: GiftGiving.command.MyGift
+      permission-message: You don't have <permission>
+   MyGifts:
+      description: Open My Gifts
+      usage: /<command>
+      permission: GiftGiving.command.MyGifts
+      permission-message: You don't have <permission>
+   GiftAdmin:
+      description: Gift Giving Admin menu
+      usage: /<command> <name>
+      permission: GiftGiving.command.GiftAdmin
+      permission-message: You don't have <permission>
+permissions:
+   GiftGiving.command.*:
+      description: Access to all gift commands
+      default: OP
+      children:
+         GiftGiving.command.Gift: true
+         GiftGiving.command.MyGift: true
+         GiftGiving.command.MyGifts: true
+         GiftGiving.command.GiftAdmin: true
+         GiftGiving.command.GiftAdmin.UnlockGifts: true
+   GiftGiving.command.Gift:
+      description: Gift Giving Permission
+      default: true
+   GiftGiving.command.MyGifts:
+      description: My Gifts permission
+      default: true
+   GiftGiving.command.MyGifts:
+      description: My Gifts permission
+      default: true
+   GiftGiving.can.open.own.gift:
+      description: Can open their own gift before gifts are released
+      default: false
+   GiftGiving.command.GiftAdmin:
+      description: Gift Giving Admin permission
+      default: false
+   GiftGiving.command.GiftAdmin.UnlockGifts:
+      description: Gift Giving Admin permission
+      default: false
+   GiftGiving.message.announceGiftUnlockedOnJoin:
+      description: If the gifts are unlocked, let the player know when they join
+      default: true

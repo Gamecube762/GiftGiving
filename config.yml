@@ -1,0 +1,8 @@
+settings:
+    debug: 0
+    presentsUnlocked: false
+    #Will autoset presentsUnlocked to true when date is reached
+    unlockDate:
+        enabled:true
+        month:12
+        day:25
