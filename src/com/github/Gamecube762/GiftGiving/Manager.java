@@ -25,7 +25,7 @@ public class Manager {
     private File pluginFolder;
     private File inventoriesFolder;
 
-
+    private boolean config_AutoUpdate;
     private int config_DebugMessages;
     private boolean config_PresentsUnlocked;
 
@@ -47,6 +47,7 @@ public class Manager {
     }
 
     private void loadConfig(){
+        config_AutoUpdate = config.getBoolean("settings.AutoUpdate");
         config_DebugMessages = config.getInt("settings.debug");
         config_PresentsUnlocked = config.getBoolean("settings.presentsUnlocked");
 
@@ -96,6 +97,8 @@ public class Manager {
         return b;
     }
 
+
+    public boolean getconfig_AutoUpdate(){return config_AutoUpdate;}
 
     public File getInventoriesFolder() {return inventoriesFolder;}
     public File getPluginFolder() {return pluginFolder;}

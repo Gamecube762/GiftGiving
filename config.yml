@@ -1,4 +1,5 @@
 settings:
+    AutoUpdate: true
     debug: 0
     presentsUnlocked: false
     #Will autoset presentsUnlocked to true when date is reached

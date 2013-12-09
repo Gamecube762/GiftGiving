@@ -26,8 +26,9 @@ public class main extends JavaPlugin {
         getCommand("mygifts").setExecutor(b);
         getCommand("giftadmin").setExecutor(b);
 
-
-        Updater updater = new Updater(this, 70053, this.getFile(), Updater.UpdateType.DEFAULT, false);
+        if (a.getconfig_AutoUpdate()) {
+            Updater updater = new Updater(this, 70053, this.getFile(), Updater.UpdateType.DEFAULT, false);
+        }
 
         LoadMCStats();
 
